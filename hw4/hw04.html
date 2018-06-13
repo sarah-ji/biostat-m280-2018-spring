@@ -11786,6 +11786,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In this homework, we build a classifer for handwritten digit recognition. Following figure shows example bitmaps of handwritten digits from U.S. postal envelopes.</p>
+<p><img src="http://Hua-Zhou.github.io/teaching/biostatm280-2018spring/hw/hw4/handwritten_digits.png" width="400" align="center"/></p>
 <p>Each digit is represented by a $32 \times 32$ bitmap in which each element indicates one pixel with a value of white or black. Each $32 \times 32$ bitmap is divided into blocks of $4 \times 4$, and the number of white pixels are counted in each block. Therefore each handwritten digit is summarized by a vector $\mathbf{x} = (x_1, \ldots, x_{64})$ of length 64 where each element is a count between 0 and 16.</p>
 <p>We will use a model-based method by assuming a distribution on the count vector and carry out classification using probabilities. A common distribution for count vectors is the multinomial distribution. However as you will see in Q10, it is not a good model for handwritten digits. Let's work on a more flexible model for count vectors. In the Dirichlet-multinomial model, we assume the multinomial probabilities $\mathbf{p} = (p_1,\ldots, p_d)$ follow a Dirichlet distribution with parameter vector $\alpha = (\alpha_1,\ldots, \alpha_d)$, $\alpha_j&gt;0$, and density
 $$
